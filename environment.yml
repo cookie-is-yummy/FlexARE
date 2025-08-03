@@ -1,0 +1,27 @@
+name: flexare2
+channels:
+  - conda-forge
+  - pytorch
+dependencies:
+  # ----- core -----
+  - python=3.11
+  - numpy=1.26        # binary wheel available
+  - pytorch=2.2
+  - torchvision
+  - torchaudio
+  - dynesty=2.1
+  - diffusers=0.27
+  - einops
+  - wandb  # ----- dev -----
+  - black
+  - ruff
+  - pre-commit
+  - pytest
+  - jupyterlab
+  - pip               # still include pip, but we'll use it sparingly
+  # ----- pip-only small extras -----
+  - pip:
+      - corner
+      - n2v
+      - sbi
+      - taurex
